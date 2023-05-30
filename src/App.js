@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return(
+
+    <div className='flame'>
+      <h1>●Form-Jackingとは</h1>
+      <p>フォームジャッキングは、情報を盗むためのコードをECサイトなどの注文情報入力フォームに仕掛け、決済ページや購入ページなどからクレジットカード情報などの個人情報を盗み出す攻撃手法。脆弱なWEBサイトで、入力フォームにスクリプトを埋め込むことで、個人情報の送信先が攻撃者になるように作られている。
+</p>
+      <h1>●対策方法</h1>
+      <p>ここではいくつかのForm-Jackingへの対策方法を紹介します。</p>
+      <ul>
+        <li className='sss'>
+          <h3>SSL/TSLによる通信データの暗号化</h3>
+        データを暗号化し、入力データがサーバに保存されるまでの通信経路上で窃盗、改ざんされるのを防ぐ。サイト全体を暗号化する「常時SSL化」が有効。</li>
+
+        <li>
+          <h3>管理画面のURLを推測できない文字列にする</h3>
+        admin,users,staff,manager,consoleなどは推測されやすい。</li>
+        <li>
+          <h3>ファイアウォールの設定</h3>
+          不要なポートとプロトコルを遮断。不正なアクセスがあった場合に、管理者へ通知。</li>
+        <li>
+          <h3>WAF</h3>
+          WEBサイト上のアプリケーションに特化したファイアウォール。</li>
+        <li>
+          <h3>IPS</h3>
+          不正な通信を感知し、アクセスを防止したり、アクセス元のIPアドレスを遮断できる。</li>
+        <li>
+          <h3>IPアドレス認証</h3>
+          あらかじめアクセスできるIPアドレスを設定しておき、ログイン時、アクセス時に照合する。</li>
+        <li>
+          <h3>Basic認証</h3>
+          事前に設定したIDとパスワードを照合することで簡易的にアクセス認証を行う。webサーバ上に「.htaccess」という設定ファイルを置くことで、利用できる。</li>
+
+      </ul>
+      
+
     </div>
-  );
+  ) ;
 }
 
 export default App;
